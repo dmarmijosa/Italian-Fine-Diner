@@ -4,16 +4,6 @@ declare var Swiper: any;
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent  {
 
-  ngAfterViewInit(): void {
-    new Swiper('.home__wrapper', {
-      loop: true,
-      createElements:true,
-      navigation:true,
-      autoplay:{
-        delay:5000
-      }
-    });
-  }
 }

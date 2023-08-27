@@ -1,0 +1,45 @@
+<section class="contact">
+    <h2 class="contact__heading">{{'Contact form' | titlecase}}</h2>
+    <div class="contact__grid">
+        <div class="contact__information">
+            <h3 class="contact__title">Here You Can Make A Reservation Or Just walkin to our cafe</h3>
+            <p class="contact__texto">Book a spot or just contact us. We're happy to serve you either way!</p>
+            <div class="contacts">
+                <div class="contacts__cellphone">
+                    <h3 class="contacts__title">Phone Number</h3>
+                    <a href="tel:090-000-0000" class="contacts__enlace">090-000-0000</a>
+                    <a href="tel:090-000-0000" class="contacts__enlace">090-000-0000</a>
+                </div>
+                <div class="contacts__email">
+                    <h3 class="contacts__title">Email</h3>
+                    <a href="mailto:example@correo.com" class="contacts__enlace">example@correo.com</a>
+                    <a href="mailto:example@correo.com" class="contacts__enlace">example@correo.com</a>
+                </div>
+            </div>
+        </div>
+        <form (ngSubmit)="submit()" class="form" [formGroup]="formularioContacto">
+            <div class="form__item">
+
+                <input class="form__input" formControlName="name" type="text" placeholder="Name*">
+                <span class="form__error" *ngIf="campoNoEsValido('name')">
+                    Debe de ser de minímo 3 letras</span>
+            </div>
+            <div class="form__item">
+                <input class="form__input" formControlName="email" type="email" placeholder="Email*">
+                <span class="form__error" *ngIf="campoNoEsValido('email')">
+                    Debe de ser un correo valido</span>
+            </div>
+            <div class="form__item">
+                <input class="form__input" formControlName="cellphone" type="tel" placeholder="Number Phone*">
+                <span class="form__error" *ngIf="campoNoEsValido('cellphone')">
+                    Debe de ser de un teléfono valído</span>
+            </div>
+            <div class="form__item">
+                <input class="form__input" formControlName="message" type="text" placeholder="message*">
+                <span class="form__error" *ngIf="campoNoEsValido('message')">
+                    Debe de ser de minímo 10 caracteres</span>
+            </div>
+            <input class="form__submit" type="submit" value="Submit">
+        </form>
+    </div>
+</section>

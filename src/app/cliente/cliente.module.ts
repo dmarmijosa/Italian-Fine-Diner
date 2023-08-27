@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MenuComponent } from './menu/menu.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    MenuComponent
+    MenuComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
-    ClienteRoutingModule
+    ClienteRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ClienteModule { }
