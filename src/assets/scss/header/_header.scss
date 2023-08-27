@@ -37,6 +37,17 @@
         color: v.$negro;
         text-decoration: none;
         transition: color .3s;
+        &:last-child{
+            padding: 1.5rem 2rem;
+            border: .2rem solid v.$primario ;
+            border-radius: 1rem;
+            transition: background-color .3s;
+            &:hover{
+                background-color: v.$primario;
+                color:v.$blanco;
+                border-color: v.$negro;
+            }
+        }
         &:hover{
             color: v.$primario;
         }

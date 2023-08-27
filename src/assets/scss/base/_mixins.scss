@@ -61,9 +61,23 @@
     font-family: v.$fuentePrincipal;
   }
 }
-@mixin heading {
+@mixin headingTitle {
+  background-color: v.$primario;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 400;
-  font-size: 4rem;
+  color: v.$blanco;
+  position: relative;
+  margin-left: 3.7rem;
+  &::before {
+    content: "";
+    width: 3rem;
+    position: absolute;
+    left: -3.7rem;
+    top: 50%;
+    height: 0.1rem;
+    background-color: v.$primario;
+  }
 }
