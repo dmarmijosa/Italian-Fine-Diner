@@ -1,0 +1,20 @@
+
+<section class="login">
+    <div class="login__contenedor">
+
+        <img src="../../../assets/img/logo.png" alt="logo imagen" class="login__logo">
+        <form action="" class="login__formulario">
+            <div class="login__entrada">
+                <label for="username" class="login__label">Username</label>
+                <input placeholder="Username" id="username" type="text" class="login__input">
+            </div>
+            <div class="login__entrada">
+                <label for="password" class="login__label">Password</label>
+                <input placeholder="Password" id="password" type="password" class="login__input">
+            </div>
+            <input (click)="redireccionar()" type="submit" value="Login" class="login__submit">
+        </form>
+        <p class="login__text">If you have forgotten the password you can retrieve it by <a href="#" class="login__enlace">clicking here</a></p>
+    </div>
+
+</section>

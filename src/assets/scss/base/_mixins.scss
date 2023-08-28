@@ -32,6 +32,7 @@
   text-transform: uppercase;
   transition: background-color;
   transition-duration: 300ms;
+  cursor: pointer;
 
   @include tablet {
     width: auto;

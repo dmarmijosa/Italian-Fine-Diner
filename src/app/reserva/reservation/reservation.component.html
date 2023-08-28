@@ -1,0 +1,53 @@
+<section class="reservation">
+    <h2 class="reservation__heading">Welcome to reservation</h2>
+    <div class="reservation__grid">
+        <div class="verificar">
+            <h3 class="verificar__heading">Verify your reservation</h3>
+            <p class="verificar__texto">Welcome to the verification system of your reservation, for them we need you to
+                enter the 4 digits of your reservation code in which it was given to you by email once your purchase was
+                completed.</p>
+            <form class="verificar__formulario" (ngSubmit)="verificar()" [formGroup]="codigo">
+                <div class="verificar__grid">
+                    <input formControlName="char1" class="verificar__input" type="text" maxlength="1" placeholder="X">
+                    <input formControlName="char2" class="verificar__input" type="text" maxlength="1" placeholder="X">
+                    <input formControlName="char3" class="verificar__input" type="text" maxlength="1" placeholder="X">
+                    <input formControlName="char4" class="verificar__input" type="text" maxlength="1" placeholder="X">
+                </div>
+                <p class="verificar__error" *ngIf="errorVerificar">Error: Verify the code is well written</p>
+                <input class="verificar__submit" type="submit" value="verify">
+            </form>
+        </div>
+        <div class="crear-Reserva">
+            <h3 class="crear-Reserva__heading">Create a reservation</h3>
+            <p class="crear-Reserva__texto">Welcome to the registration form to obtain a reservation in.</p>
+            <p class="crear-Reserva__texto">Next we will need some information from you before processing the payment method.
+            </p>
+            <form class="crear-Reserva__formulario" (ngSubmit)="submit()" [formGroup]="formularioReserva">
+                <div class="form__item">
+                    <input class="form__input" formControlName="name" type="text" placeholder="Name*">
+                    <span class="form__error" *ngIf="campoNoEsValido('name')">
+                        Must be at least 3 letters</span>
+                </div>
+                <div class="form__item">
+                    <input class="form__input" formControlName="email" type="email" placeholder="Email*">
+                    <span class="form__error" *ngIf="campoNoEsValido('email')">
+                        It must be a valid email</span>
+                </div>
+                <div class="form__item">
+                    <input class="form__input" formControlName="cellphone" type="tel" placeholder="Number Phone*">
+                    <span class="form__error" *ngIf="campoNoEsValido('cellphone')">
+                        It must be from a valid phone</span>
+                </div>
+                <div class="form__item">
+                    <input class="form__input" formControlName="info" type="text" placeholder="Additional Information">
+                    <span class="form__error" *ngIf="campoNoEsValido('message')">
+                        Must be at least 10 characters</span>
+                </div>
+                <input class="form__submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <p class="reservation__terminos">We are committed to protecting the privacy of our users. See our Privacy Policy for
+        more information.</p>
+    <a href="/admin" class="reservation__enlace">Italian Fine Diner</a>
+</section>

@@ -1,6 +1,7 @@
 @use "../base/mixins" as m;
 .gallery {
     padding-bottom: 4rem;
+    margin-top: 2rem;
   &__heading {
     max-width: 20rem;
     @include m.headingTitle;

@@ -22,22 +22,22 @@
 
                 <input class="form__input" formControlName="name" type="text" placeholder="Name*">
                 <span class="form__error" *ngIf="campoNoEsValido('name')">
-                    Debe de ser de minímo 3 letras</span>
+                    Must be at least 3 letters</span>
             </div>
             <div class="form__item">
                 <input class="form__input" formControlName="email" type="email" placeholder="Email*">
                 <span class="form__error" *ngIf="campoNoEsValido('email')">
-                    Debe de ser un correo valido</span>
+                    It must be a valid email</span>
             </div>
             <div class="form__item">
                 <input class="form__input" formControlName="cellphone" type="tel" placeholder="Number Phone*">
                 <span class="form__error" *ngIf="campoNoEsValido('cellphone')">
-                    Debe de ser de un teléfono valído</span>
+                    It must be from a valid phone</span>
             </div>
             <div class="form__item">
-                <input class="form__input" formControlName="message" type="text" placeholder="message*">
+                <input class="form__input" formControlName="message" type="text" placeholder="Message*">
                 <span class="form__error" *ngIf="campoNoEsValido('message')">
-                    Debe de ser de minímo 10 caracteres</span>
+                    Must be at least 10 characters</span>
             </div>
             <input class="form__submit" type="submit" value="Submit">
         </form>
