@@ -1,0 +1,20 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.crear-Reserva{
+    background-image: url('../../img/reservation-bg.jpg');
+    background-attachment: fixed;
+    color:v.$blanco;
+    padding: 1rem;
+    &__heading{
+        font-size: 2.9rem;
+        text-align: center;
+    }
+    &__texto{
+        @include m.tablet { 
+            max-width: 49rem;
+            margin: 0 auto;
+        }
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}

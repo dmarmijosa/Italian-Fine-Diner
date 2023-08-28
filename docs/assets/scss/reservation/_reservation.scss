@@ -1,0 +1,76 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.reservation {
+    @include m.desktop { 
+        border-top: 1px solid v.$gris;
+    }
+  &__heading {
+    text-align: center;
+  }
+  &__terminos {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  &__enlace {
+    display: block;
+    text-decoration: none;
+    color: v.$primario;
+    text-align: center;
+    font-size: 6rem;
+    font-family: v.$fuenteCursiva;
+  }
+  &__grid {
+    @include m.desktop {
+      @include m.grid(2, 0rem);
+      align-items: center;
+    }
+  }
+}
+.verificar {
+  border-top: 1px solid v.$gris;
+  @include m.desktop { 
+    border-top: none;
+  }
+  margin: 0 2rem;
+  &__heading {
+    text-align: center;
+  }
+  &__texto {
+    text-align: justify;
+  }
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__input {
+    font-size: 2.3rem;
+    padding: 2rem 0;
+    text-align: center;
+    color: v.$negro;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: 3px solid v.$primario;
+    max-width: 5rem;
+    &::placeholder {
+      color: v.$gris;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__submit {
+    @include m.boton(v.$primario, v.$blanco);
+    margin: 2rem auto;
+    display: block;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+  }
+  &__error {
+    color: v.$primario;
+    text-align: center;
+  }
+}

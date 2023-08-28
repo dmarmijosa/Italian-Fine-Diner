@@ -1,0 +1,46 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.footer {
+  padding: 4rem 0;
+  border-top: 1px solid v.$gris;
+  &__grid{
+    @include m.desktop { 
+        @include m.grid(3,4rem);
+        align-items: center;
+    }
+  }
+  &__imagen {
+    margin: 0 auto;
+  }
+  &__copyright {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  &__nombre {
+    font-family: v.$fuenteCursiva;
+    font-size: 4rem;
+    color: v.$primario;
+  }
+  &__autor,
+  &__texto {
+    margin: 0;
+  }
+  &__enlace {
+    text-decoration: none;
+    color: v.$primario;
+    font-weight: 700;
+  }
+}
+.redes {
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__items {
+    color: v.$primario;
+    padding: 1rem;
+    font-size: 4rem;
+  }
+}

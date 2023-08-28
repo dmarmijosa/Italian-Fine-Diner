@@ -1,0 +1,86 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.contact {
+  padding: 5rem 0;
+  @include m.desktop { 
+    border-top: 1px solid v.$gris;
+  }
+  &__grid {
+    margin: 3rem 0;
+    @include m.desktop {
+      @include m.grid(2, 0rem);
+    }
+  }
+  &__heading {
+    text-align: center;
+    margin: 0;
+    font-weight: 900;
+    border-bottom: 1px solid v.$gris;
+    @include m.desktop { 
+      border-bottom: none;
+    }
+  }
+  &__information {
+    margin-bottom: 2rem;
+  }
+  &__texto,
+  &__title {
+    text-align: center;
+  }
+}
+
+.contacts {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__enlace {
+    text-decoration: none;
+    display: block;
+    color: v.$negro;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
+.form {
+  padding: 2rem 0;
+
+  background-image: url(../../img/reservation-bg.jpg);
+  &__item {
+    margin: 4rem;
+  }
+  &__input {
+    background-color: transparent;
+    color: v.$blanco;
+    border: none;
+    border-bottom: 1px solid v.$blanco;
+    width: 100%;
+    font-size: 2rem;
+    &::placeholder {
+      color: v.$blanco;
+    }
+    &:focus-visible {
+      border: none;
+      outline: none;
+      box-shadow: 0 2px 0 0 v.$blanco;
+    }
+  }
+  &__error {
+    margin-top: 1rem;
+    display: block;
+    color: v.$primario;
+  }
+  &__submit {
+    @include m.boton(v.$primario, v.$blanco);
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}

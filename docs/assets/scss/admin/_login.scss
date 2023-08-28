@@ -1,0 +1,56 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.login{
+    margin: 2rem 0;
+    &__contenedor{
+        background-color: v.$blanco;
+        max-width: 40rem;
+        padding: 3rem 2rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid v.$primario;
+        border-radius: 2rem;
+
+    }
+    &__logo{
+        max-width: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+    &__formulario{
+        margin-top: 2rem;
+    }
+    &__entrada{
+        display: flex;
+        flex-direction: column;
+    }
+    &__label{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        color: v.$primario;
+    }
+    &__input{
+        padding: .5rem 0;
+        border: none;
+        border-bottom: 1px solid  v.$primario;
+        outline: v.$primario;
+        font-size: 2rem;
+    }
+    &__submit{
+        margin-top: 2rem;
+        @include m.boton(v.$primario,v.$blanco);
+        padding: 1rem;
+        font-size: 1.8rem;
+        border: none;
+        border-radius: .9rem;
+    }
+    &__text{
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+    &__enlace{
+        color: v.$primario;
+        font-weight: 700;
+    }
+}
